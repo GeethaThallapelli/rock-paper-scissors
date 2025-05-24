@@ -14,5 +14,4 @@ A simple browser game built using HTML, CSS, and JavaScript.
 - CSS
 - JavaScript
 
-## Screenshot
-_Add a screenshot here if you'd like!_
+
