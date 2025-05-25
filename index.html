@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>ROCK PAPER SCISSORS</title>
-        <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Rock, Paper, Scissors Game</h1>
 
-    </head>
-    <body>
-        <h1> WELCOME TO ROCK PAPER SCISSORS GAME</h1>
-        <h2> Choose Your Option</h2>
-        <button onclick="play('ROCK')"> ROCK</button>
-        <button onclick="play('PAPER')">PAPER</button>
-        <button onclick="play('SCISSOR')">SCISSORS</button>
-        <div id="result"> </div>
+  <div class="scoreboard">
+    <p>You: <span id="user-score">0</span></p>
+    <p>Computer: <span id="computer-score">0</span></p>
+  </div>
 
-        
-          <script>
-            //function starts
-            function play(userinput){
-                const choice=['ROCK','PAPER','SCISSOR'];//array
-                //const computerChoice = choices[Math.floor(Math.random() * 3)];
+  <div class="buttons">
+    <button onclick="play('rock')">🪨 Rock</button>
+    <button onclick="play('paper')">📄 Paper</button>
+    <button onclick="play('scissors')">✂️ Scissors</button>
+  </div>
 
-                const res=choice[Math.floor(Math.random()*3)];
-                let msg=`you chose ${userinput} ,computer chose ${res}`;
-                //draw case
-                if (userinput==res){
-                    msg=msg+" "+"\nit's a draw";
+  <div id="result"></div>
 
-                }
-                //win case
-                else if(
-                    userinput==='ROCK' && res==='SCISSOR'||
-                    userinput==='SCISSOR' && res==='PAPER'||
-                    userinput==='PAPER' && res==='ROCK'
-            ){
-                msg=msg+" "+"\nyou won 🎉 .....";
-            }
-            else{
-                msg=msg+" "+"\nYou lose!😢"
-            }
-            document.getElementById('result').textContent=msg;
-
-
-          }
- 
-          </script>
-        
-
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>
